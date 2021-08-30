@@ -7,22 +7,12 @@ registry = CheckRegister()
 ec2 = boto3.client("ec2")
 
 # loop through ec2 instances
-def describe_instances_of_sg(cache, sg_id):
-    response = cache.get("describe_instances").get(sg_id)
+def describe_instances(cache):
+    response = cache.get("describe_instances")
     if response:
         return response
-    sg_search = {
-        "Name": "instance.group-id",
-        "Values": [
-            sg_id
-        ]
-    }
-    cache["describe_instances"][sg_id] = ec2.describe_instances(
-        DryRun=False,
-        MaxResults=1000,
-        Filters=sg_search
-    )
-    return cache["describe_instances"][sg_id]
+    cache["describe_instances"] = ec2.describe_instances(DryRun=False, MaxResults=1000)
+    return cache["describe_instances"]
 
 
 # loop through security groups
@@ -34,169 +24,187 @@ def describe_security_groups(cache):
     return cache["describe_security_groups"]
 
 @registry.register_check("ec2")
-def security_group_any_open_check(
+def instance_with_open_security_group_check(
     cache: dict, awsAccountId: str, awsRegion: str, awsPartition: str
 ) -> dict:
-    response = describe_security_groups(cache)
-    mySgs = response["SecurityGroups"]
-    for secgroup in mySgs:
-        sgName = str(secgroup["GroupName"])
-        sgId = str(secgroup["GroupId"])
-        sgArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:security-group/{sgId}"
-        for permissions in secgroup["IpPermissions"]:
-            try:
-                fromPort = str(permissions["FromPort"])
-            except Exception as e:
-                if str(e) == "'FromPort'":
+    instance_response = describe_instances(cache)
+    sg_response = describe_security_groups(cache)
+    myEc2InstanceReservations = instance_response["Reservations"]
+    for reservations in myEc2InstanceReservations:
+        for instances in reservations["Instances"]:
+            instanceId = str(instances["InstanceId"])
+            instanceArn = (
+                f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:instance/{instanceId}"
+            )
+            instanceType = str(instances["InstanceType"])
+            instanceImage = str(instances["ImageId"])
+            instanceVpc = str(instances["VpcId"])
+            instanceSubnet = str(instances["SubnetId"])
+            instanceLaunchedAt = str(instances["LaunchTime"])
+            sg_with_open_port = 0
+            for instanceSg in instances["SecurityGroups"]:
+                sgName = str(instanceSg["GroupName"])
+                sgId = str(instanceSg["GroupId"])
+                sgArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:security-group/{sgId}"
+                secgroup = next((sub for sub in sg_response["SecurityGroups"] if sub['GroupId'] == sgId), None)
+                if not secgroup:
                     pass
-                else:
-                    print(e)
-            try:
-                toPort = str(permissions["ToPort"])
-            except Exception as e:
-                if str(e) == "'ToPort'":
-                    pass
-                else:
-                    print(e)
-            try:
-                ipProtocol = str(permissions["IpProtocol"])
-            except Exception as e:
-                print(e)
-            ipRanges = permissions["IpRanges"]
-            for cidrs in ipRanges:
-                cidrIpRange = str(cidrs["CidrIp"])
-                iso8601Time = (
-                    datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
-                )
-                if cidrIpRange == "0.0.0.0/0":
-                    # sg_instances = describe_instances_of_sg(cache, sgId)
-                    instance_list = []
-                    myReservations = response["Reservations"]
-                    for reservations in myReservations:
-                        myInstances = reservations["Instances"]
-                        for instances in myInstances:
-                            instanceId = str(instances["InstanceId"])
-                            instance_list.append(instanceId)
-                    finding = {
-                        "SchemaVersion": "2018-10-08",
-                        "Id": sgArn + "/" + ipProtocol + "/security-group-any-open-check",
-                        "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
-                        "GeneratorId": sgArn,
-                        "AwsAccountId": awsAccountId,
-                        "Types": [
-                            "Software and Configuration Checks/AWS Security Best Practices",
-                            "Effects/Data Exposure",
-                        ],
-                        "FirstObservedAt": iso8601Time,
-                        "CreatedAt": iso8601Time,
-                        "UpdatedAt": iso8601Time,
-                        "Severity": {"Label": "CRITICAL"},
-                        "Confidence": 99,
-                        "Title": "[SecurityGroup.1] Security groups has unrestricted access to some ports and protocols",
-                        "Description": "Security group "
-                        + sgName
-                        + " allows unrestricted access to some ports and protocols. Refer to the remediation instructions to remediate this behavior. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
-                        "Remediation": {
-                            "Recommendation": {
-                                "Text": "For more information on modifying security group rules refer to the Adding, Removing, and Updating Rules section of the Amazon Virtual Private Cloud User Guide",
-                                "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
-                            }
-                        },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
-                        "Resources": [
-                            {
-                                "Type": "AwsEc2SecurityGroup",
-                                "Id": sgArn,
-                                "Partition": awsPartition,
-                                "Region": awsRegion,
-                                "Details": {
-                                    "AwsEc2SecurityGroup": {"GroupName": sgName, "GroupId": sgId,},
-                                    "Instance": instance_list
+                for permissions in secgroup["IpPermissions"]:
+                    try:
+                        fromPort = str(permissions["FromPort"])
+                    except Exception as e:
+                        if str(e) == "'FromPort'":
+                            pass
+                        else:
+                            print(e)
+                    try:
+                        toPort = str(permissions["ToPort"])
+                    except Exception as e:
+                        if str(e) == "'ToPort'":
+                            pass
+                        else:
+                            print(e)
+                    try:
+                        ipProtocol = str(permissions["IpProtocol"])
+                    except Exception as e:
+                        print(e)
+                    ipRanges = permissions["IpRanges"]
+                    for cidrs in ipRanges:
+                        cidrIpRange = str(cidrs["CidrIp"])
+                        iso8601Time = (
+                            datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+                        )
+                        if cidrIpRange == "0.0.0.0/0":
+                            sg_with_open_port = sg_with_open_port+1
+                            finding = {
+                                "SchemaVersion": "2018-10-08",
+                                "Id": instanceArn + "/" + ipProtocol + "/security-group-any-open-check",
+                                "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
+                                "GeneratorId": instanceArn,
+                                "AwsAccountId": awsAccountId,
+                                "Types": [
+                                    "Software and Configuration Checks/AWS Security Best Practices",
+                                    "Effects/Data Exposure",
+                                ],
+                                "FirstObservedAt": iso8601Time,
+                                "CreatedAt": iso8601Time,
+                                "UpdatedAt": iso8601Time,
+                                "Severity": {"Label": "CRITICAL"},
+                                "Confidence": 99,
+                                "Title": "[Instance.1] Security group of instance has unrestricted access to some ports and protocols",
+                                "Description": "Instance" + instanceId + "'s Security group "
+                                + sgName
+                                + " allows unrestricted access to some ports and protocols. Refer to the remediation instructions to remediate this behavior. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
+                                "Remediation": {
+                                    "Recommendation": {
+                                        "Text": "For more information on modifying security group rules refer to the Adding, Removing, and Updating Rules section of the Amazon Virtual Private Cloud User Guide",
+                                        "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
+                                    }
                                 },
-                            }
-                        ],
-                        "Compliance": {
-                            "Status": "FAILED",
-                            "RelatedRequirements": [
-                                "NIST CSF PR.AC-3",
-                                "NIST SP 800-53 AC-1",
-                                "NIST SP 800-53 AC-17",
-                                "NIST SP 800-53 AC-19",
-                                "NIST SP 800-53 AC-20",
-                                "NIST SP 800-53 SC-15",
-                                "AICPA TSC CC6.6",
-                                "ISO 27001:2013 A.6.2.1",
-                                "ISO 27001:2013 A.6.2.2",
-                                "ISO 27001:2013 A.11.2.6",
-                                "ISO 27001:2013 A.13.1.1",
-                                "ISO 27001:2013 A.13.2.1",
-                            ],
-                        },
-                        "Workflow": {"Status": "NEW"},
-                        "RecordState": "ACTIVE",
-                    }
-                    yield finding
-                else:
-                    finding = {
-                        "SchemaVersion": "2018-10-08",
-                        "Id": sgArn + "/" + ipProtocol + "/security-group-all-open-check",
-                        "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
-                        "GeneratorId": sgArn,
-                        "AwsAccountId": awsAccountId,
-                        "Types": [
-                            "Software and Configuration Checks/AWS Security Best Practices",
-                            "Effects/Data Exposure",
-                        ],
-                        "FirstObservedAt": iso8601Time,
-                        "CreatedAt": iso8601Time,
-                        "UpdatedAt": iso8601Time,
-                        "Severity": {"Label": "INFORMATIONAL"},
-                        "Confidence": 99,
-                        "Title": "[SecurityGroup.1] Security groups should not allow unrestricted access to any ports and protocols",
-                        "Description": "Security group "
-                        + sgName
-                        + " does not allow unrestricted access to any ports and protocols. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
-                        "Remediation": {
-                            "Recommendation": {
-                                "Text": "For more information on modifying security group rules refer to the Adding, Removing, and Updating Rules section of the Amazon Virtual Private Cloud User Guide",
-                                "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
-                            }
-                        },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
-                        "Resources": [
-                            {
-                                "Type": "AwsEc2SecurityGroup",
-                                "Id": sgArn,
-                                "Partition": awsPartition,
-                                "Region": awsRegion,
-                                "Details": {
-                                    "AwsEc2SecurityGroup": {"GroupName": sgName, "GroupId": sgId,}
+                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "Resources": [
+                                    {
+                                        "Type": "AwsEc2Instance",
+                                        "Id": instanceArn,
+                                        "Partition": awsPartition,
+                                        "Region": awsRegion,
+                                        "Details": {
+                                            "AwsEc2Instance": {
+                                                "Type": instanceType,
+                                                "ImageId": instanceImage,
+                                                "VpcId": instanceVpc,
+                                                "SubnetId": instanceSubnet,
+                                                "LaunchedAt": instanceLaunchedAt,
+                                                "SecurityGroup": {"GroupName": sgName, "GroupId": sgId, },
+                                            }
+                                        },
+                                    }
+                                ],
+                                "Compliance": {
+                                    "Status": "FAILED",
+                                    "RelatedRequirements": [
+                                        "NIST CSF PR.AC-3",
+                                        "NIST SP 800-53 AC-1",
+                                        "NIST SP 800-53 AC-17",
+                                        "NIST SP 800-53 AC-19",
+                                        "NIST SP 800-53 AC-20",
+                                        "NIST SP 800-53 SC-15",
+                                        "AICPA TSC CC6.6",
+                                        "ISO 27001:2013 A.6.2.1",
+                                        "ISO 27001:2013 A.6.2.2",
+                                        "ISO 27001:2013 A.11.2.6",
+                                        "ISO 27001:2013 A.13.1.1",
+                                        "ISO 27001:2013 A.13.2.1",
+                                    ],
                                 },
+                                "Workflow": {"Status": "NEW"},
+                                "RecordState": "ACTIVE",
                             }
+                            yield finding
+            if sg_with_open_port == 0:
+                finding = {
+                    "SchemaVersion": "2018-10-08",
+                    "Id": instanceArn + "/" + ipProtocol + "/security-group-any-open-check",
+                    "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
+                    "GeneratorId": instanceArn,
+                    "AwsAccountId": awsAccountId,
+                    "Types": [
+                        "Software and Configuration Checks/AWS Security Best Practices",
+                        "Effects/Data Exposure",
+                    ],
+                    "FirstObservedAt": iso8601Time,
+                    "CreatedAt": iso8601Time,
+                    "UpdatedAt": iso8601Time,
+                    "Severity": {"Label": "INFORMATIONAL"},
+                    "Confidence": 99,
+                    "Title": "[Instance.1] Security group of instance should not allow unrestricted access to any ports and protocols",
+                    "Description": "Instance" + instanceId + "'s Security groups do not allow unrestricted access to any ports and protocols. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
+                    "Remediation": {
+                        "Recommendation": {
+                            "Text": "For more information on modifying security group rules refer to the Adding, Removing, and Updating Rules section of the Amazon Virtual Private Cloud User Guide",
+                            "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
+                        }
+                    },
+                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "Resources": [
+                        {
+                            "Type": "AwsEc2Instance",
+                            "Id": instanceArn,
+                            "Partition": awsPartition,
+                            "Region": awsRegion,
+                            "Details": {
+                                "AwsEc2Instance": {
+                                    "Type": instanceType,
+                                    "ImageId": instanceImage,
+                                    "VpcId": instanceVpc,
+                                    "SubnetId": instanceSubnet,
+                                    "LaunchedAt": instanceLaunchedAt,
+                                    "SecurityGroup": instances["SecurityGroups"],
+                                }
+                            },
+                        }
+                    ],
+                    "Compliance": {
+                        "Status": "PASSED",
+                        "RelatedRequirements": [
+                            "NIST CSF PR.AC-3",
+                            "NIST SP 800-53 AC-1",
+                            "NIST SP 800-53 AC-17",
+                            "NIST SP 800-53 AC-19",
+                            "NIST SP 800-53 AC-20",
+                            "NIST SP 800-53 SC-15",
+                            "AICPA TSC CC6.6",
+                            "ISO 27001:2013 A.6.2.1",
+                            "ISO 27001:2013 A.6.2.2",
+                            "ISO 27001:2013 A.11.2.6",
+                            "ISO 27001:2013 A.13.1.1",
+                            "ISO 27001:2013 A.13.2.1",
                         ],
-                        "Compliance": {
-                            "Status": "PASSED",
-                            "RelatedRequirements": [
-                                "NIST CSF PR.AC-3",
-                                "NIST SP 800-53 AC-1",
-                                "NIST SP 800-53 AC-17",
-                                "NIST SP 800-53 AC-19",
-                                "NIST SP 800-53 AC-20",
-                                "NIST SP 800-53 SC-15",
-                                "AICPA TSC CC6.6",
-                                "ISO 27001:2013 A.6.2.1",
-                                "ISO 27001:2013 A.6.2.2",
-                                "ISO 27001:2013 A.11.2.6",
-                                "ISO 27001:2013 A.13.1.1",
-                                "ISO 27001:2013 A.13.2.1",
-                            ],
-                        },
-                        "Workflow": {"Status": "RESOLVED"},
-                        "RecordState": "ARCHIVED",
-                    }
-                    yield finding
-                # else:
-                #     pass
+                    },
+                    "Workflow": {"Status": "RESOLVED"},
+                    "RecordState": "ARCHIVED",
+                }
+                yield finding
 
 @registry.register_check("ec2")
 def security_group_all_open_check(
