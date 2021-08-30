@@ -51,13 +51,13 @@ def any_port_open_to_the_internet(
                 open_ports_list = []
                 for permission in secgroup["IpPermissions"]:
                     try:
-                        fromPort = str(permission["FromPort"])
+                        fromPort = permission["FromPort"]
                     except Exception as e:
-                        fromPort = ""
+                        fromPort = None
                     try:
-                        toPort = str(permission["ToPort"])
+                        toPort = permission["ToPort"]
                     except Exception as e:
-                        toPort = ""
+                        toPort = None
                     try:
                         ipProtocol = str(permission["IpProtocol"])
                     except Exception as e:
