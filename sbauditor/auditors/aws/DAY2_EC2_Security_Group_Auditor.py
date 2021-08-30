@@ -112,8 +112,8 @@ def any_port_open_to_the_internet(
                                                 "ImageId": instanceImage,
                                                 "VpcId": instanceVpc,
                                                 "SubnetId": instanceSubnet,
-                                                "LaunchedAt": instanceLaunchedAt,
-                                                "SecurityGroup": {"GroupName": sgName, "GroupId": sgId, },
+                                                # "LaunchedAt": instanceLaunchedAt,
+                                                # "SecurityGroup": {"GroupName": sgName, "GroupId": sgId, },
                                             }
                                         },
                                     }
