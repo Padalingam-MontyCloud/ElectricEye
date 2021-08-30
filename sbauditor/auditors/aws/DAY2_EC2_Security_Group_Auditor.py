@@ -50,24 +50,18 @@ def any_port_open_to_the_internet(
                     pass
                 open_ports_list = []
                 for permission in secgroup["IpPermissions"]:
-                    # try:
-                    #     fromPort = str(permission["FromPort"])
-                    # except Exception as e:
-                    #     if str(e) == "'FromPort'":
-                    #         pass
-                    #     else:
-                    #         print(e)
-                    # try:
-                    #     toPort = str(permission["ToPort"])
-                    # except Exception as e:
-                    #     if str(e) == "'ToPort'":
-                    #         pass
-                    #     else:
-                    #         print(e)
-                    # try:
-                    #     ipProtocol = str(permission["IpProtocol"])
-                    # except Exception as e:
-                    #     print(e)
+                    try:
+                        fromPort = str(permission["FromPort"])
+                    except Exception as e:
+                        fromPort = ""
+                    try:
+                        toPort = str(permission["ToPort"])
+                    except Exception as e:
+                        toPort = ""
+                    try:
+                        ipProtocol = str(permission["IpProtocol"])
+                    except Exception as e:
+                        ipProtocol = ""
                     ipRanges = permission["IpRanges"]
                     for cidrs in ipRanges:
                         cidrIpRange = str(cidrs["CidrIp"])
@@ -75,7 +69,11 @@ def any_port_open_to_the_internet(
                             datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
                         )
                         if cidrIpRange == "0.0.0.0/0":
-                            open_ports_list.append(permission)
+                            open_ports_list.append({
+                                "IpProtocol": ipProtocol,
+                                "FromPort": fromPort,
+                                "ToPort": toPort
+                            })
 
                 if open_ports_list:
                     finding = {
@@ -117,11 +115,11 @@ def any_port_open_to_the_internet(
                                         "VpcId": instanceVpc,
                                         "SubnetId": instanceSubnet,
                                         # "LaunchedAt": instanceLaunchedAt,
-                                        "AwsEc2SecurityGroup": {
-                                            "GroupName": sgName,
-                                            "GroupId": sgId,
-                                            "IpPermissions": open_ports_list
-                                        },
+                                    },
+                                    "AwsEc2SecurityGroup": {
+                                        "GroupName": sgName,
+                                        "GroupId": sgId,
+                                        "IpPermissions": open_ports_list
                                     }
                                 },
                             }
