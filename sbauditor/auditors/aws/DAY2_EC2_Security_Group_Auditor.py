@@ -48,8 +48,8 @@ def any_port_open_to_the_internet(
                     pass
                 for permission in secgroup["IpPermissions"]:
                     try:
-                        fromPort = permission["FromPort"]
-                        toPort = permission["ToPort"]
+                        fromPort = permission.get("FromPort")
+                        toPort = permission.get("ToPort")
                         ipProtocol = str(permission["IpProtocol"])
                         ipRanges = permission["IpRanges"]
                         for cidrs in ipRanges:
@@ -58,11 +58,18 @@ def any_port_open_to_the_internet(
                                 datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
                             )
                             if cidrIpRange == "0.0.0.0/0":
+                                if permission["IpProtocol"] == "-1":
+                                    port_detail_part = "to all ports and protocols"
+                                else:
+                                    port_detail_part = "from " + str(fromPort) + " to " + str(toPort) + " port using " + ipProtocol + " protocol"
+
                                 open_ports_dict = {
-                                    "IpProtocol": ipProtocol,
-                                    "FromPort": fromPort,
-                                    "ToPort": toPort
+                                    "IpProtocol": ipProtocol
                                 }
+                                if "FromPort" in permission:
+                                    open_ports_dict["FromPort"] = fromPort
+                                if "ToPort" in permission:
+                                    open_ports_dict["ToPort"] = toPort
                                 finding = {
                                     "SchemaVersion": "2018-10-08",
                                     "Id": instanceArn + "/" + sgId + "/" + ipProtocol + "/" + str(fromPort) + "/" + str(toPort) + "/any-port-open-to-the-internet",
@@ -79,14 +86,11 @@ def any_port_open_to_the_internet(
                                     "Severity": {"Label": "CRITICAL"},
                                     "Confidence": 99,
                                     "Title": "[Instance.1] Security group " + sgId
-                                    + " of instance has unrestricted access from " + str(fromPort) + " to " + str(toPort)
-                                    + " port using " + ipProtocol + " protocol",
+                                    + " of instance has unrestricted access " + port_detail_part,
                                     "Description": "Instance" + instanceId + "'s Security group "
                                     + sgName
-                                    + " allows unrestricted access from " + str(fromPort) + " port to "
-                                    + str(toPort) + " port using "
-                                    + ipProtocol
-                                    + " protocol. Refer to the remediation instructions to remediate this behavior. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
+                                    + " allows unrestricted access " + port_detail_part
+                                    + ". Refer to the remediation instructions to remediate this behavior. Your security group should still be audited to ensure any other rules are compliant with organizational or regulatory requirements.",
                                     "Remediation": {
                                         "Recommendation": {
                                             "Text": "For more information on modifying security group rules refer to the Adding, Removing, and Updating Rules section of the Amazon Virtual Private Cloud User Guide",
