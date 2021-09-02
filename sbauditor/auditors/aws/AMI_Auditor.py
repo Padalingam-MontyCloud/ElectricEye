@@ -163,7 +163,7 @@ def encrypted_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
             if encryptionCheck == "False":
                 finding = {
                     "SchemaVersion": "2018-10-08",
-                    "Id": amiArn + "/public-ami",
+                    "Id": amiArn + "/encrypted-ami",
                     "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
                     "GeneratorId": amiArn,
                     "AwsAccountId": awsAccountId,
@@ -216,7 +216,7 @@ def encrypted_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
             else:
                 finding = {
                     "SchemaVersion": "2018-10-08",
-                    "Id": amiArn + "/public-ami",
+                    "Id": amiArn + "/encrypted-ami",
                     "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
                     "GeneratorId": amiArn,
                     "AwsAccountId": awsAccountId,
