@@ -50,7 +50,7 @@ def any_port_open_to_the_internet(
                     try:
                         fromPort = permission.get("FromPort")
                         toPort = permission.get("ToPort")
-                        ipProtocol = str(permission["IpProtocol"])
+                        ipProtocol = str(permission.get("IpProtocol"))
                         ipRanges = permission["IpRanges"]
                         for cidrs in ipRanges:
                             cidrIpRange = str(cidrs["CidrIp"])
@@ -58,7 +58,7 @@ def any_port_open_to_the_internet(
                                 datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
                             )
                             if cidrIpRange == "0.0.0.0/0":
-                                if permission["IpProtocol"] == "-1":
+                                if ipProtocol == "-1":
                                     port_detail_part = "to all ports and protocols"
                                 else:
                                     port_detail_part = "from " + str(fromPort) + " to " + str(toPort) + " port using " + ipProtocol + " protocol"
