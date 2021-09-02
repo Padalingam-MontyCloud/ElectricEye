@@ -898,7 +898,7 @@ def elastic_update_check(
         if updateCheck == "True":
             finding = {
                 "SchemaVersion": "2018-10-08",
-                "Id": domainArn + "/elasticsearch-elastic-update-check",
+                "Id": domainArn + "/elasticsearch-version-update-check",
                 "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
                 "GeneratorId": domainArn,
                 "AwsAccountId": awsAccountId,
@@ -961,7 +961,7 @@ def elastic_update_check(
         else:
             finding = {
                 "SchemaVersion": "2018-10-08",
-                "Id": domainArn + "/elasticsearch-elastic-update-check",
+                "Id": domainArn + "/elasticsearch-version-update-check",
                 "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
                 "GeneratorId": domainArn,
                 "AwsAccountId": awsAccountId,
