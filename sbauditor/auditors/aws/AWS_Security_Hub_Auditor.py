@@ -48,7 +48,7 @@ def high_critical_findings(
     if str(getFindings["Findings"]) == "[]":
         finding = {
             "SchemaVersion": "2018-10-08",
-            "Id": "high-critical-findings-located/" + awsAccountId,
+            "Id": awsAccountId + "/high-critical-findings-located",
             "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
             "GeneratorId": generatorId,
             "AwsAccountId": awsAccountId,
@@ -89,7 +89,7 @@ def high_critical_findings(
     else:
         finding = {
             "SchemaVersion": "2018-10-08",
-            "Id": "high-critical-findings-located/" + awsAccountId,
+            "Id": awsAccountId + "/high-critical-findings-located",
             "ProductArn": f"arn:{awsPartition}:securityhub:{awsRegion}:{awsAccountId}:product/{awsAccountId}/default",
             "GeneratorId": generatorId,
             "AwsAccountId": awsAccountId,
