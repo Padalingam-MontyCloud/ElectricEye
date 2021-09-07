@@ -1,4 +1,5 @@
 import boto3
+import json
 import datetime
 from check_register import CheckRegister
 
@@ -22,6 +23,14 @@ def describe_security_groups(cache):
         return response
     cache["describe_security_groups"] = ec2.describe_security_groups()
     return cache["describe_security_groups"]
+
+
+def get_instance_name(tags):
+    for tag in tags:
+        if tag["Key"] == "Name":
+            return tag["Value"]
+    return None
+
 
 @registry.register_check("ec2")
 def any_port_open_to_the_internet(
@@ -70,6 +79,19 @@ def any_port_open_to_the_internet(
                                     open_ports_dict["FromPort"] = fromPort
                                 if "ToPort" in permission:
                                     open_ports_dict["ToPort"] = toPort
+
+                                metadata = {
+                                    "IpProtocol": ipProtocol,
+                                    "FromPort": fromPort,
+                                    "ToPort": toPort,
+                                    "SecurityGroupId": sgId,
+                                    "PublicIpAddress": instances[
+                                        "PublicIpAddress"] if "PublicIpAddress" in instances else None,
+                                    "InstanceName": None
+                                }
+                                if "Tags" in instances and len(instances["Tags"]) > 0:
+                                    metadata["InstanceName"] = get_instance_name(instances["Tags"])
+
                                 finding = {
                                     "SchemaVersion": "2018-10-08",
                                     "Id": instanceArn + "/" + sgId + "/" + ipProtocol + "/" + str(fromPort) + "/" + str(toPort) + "/any-port-open-to-the-internet",
@@ -97,7 +119,7 @@ def any_port_open_to_the_internet(
                                             "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "Metadata": json.dumps(metadata)},
                                     "Resources": [
                                         {
                                             "Type": "AwsEc2Instance",
