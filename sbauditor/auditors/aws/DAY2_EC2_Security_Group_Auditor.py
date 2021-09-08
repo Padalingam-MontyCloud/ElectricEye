@@ -82,12 +82,13 @@ def any_port_open_to_the_internet(
 
                                 metadata = {
                                     "IpProtocol": ipProtocol,
-                                    "FromPort": fromPort,
-                                    "ToPort": toPort,
+                                    "FromPort": str(fromPort),
+                                    "ToPort": str(toPort),
                                     "SecurityGroupId": sgId,
                                     "PublicIpAddress": instances[
                                         "PublicIpAddress"] if "PublicIpAddress" in instances else None,
-                                    "InstanceName": None
+                                    "InstanceName": None,
+                                    "InstanceId": instanceId
                                 }
                                 if "Tags" in instances and len(instances["Tags"]) > 0:
                                     metadata["InstanceName"] = get_instance_name(instances["Tags"])
