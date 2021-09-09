@@ -85,13 +85,14 @@ def any_port_open_to_the_internet(
                                     "FromPort": str(fromPort),
                                     "ToPort": str(toPort),
                                     "SecurityGroupId": sgId,
-                                    "PublicIpAddress": instances[
-                                        "PublicIpAddress"] if "PublicIpAddress" in instances else None,
-                                    "InstanceName": None,
                                     "InstanceId": instanceId
                                 }
                                 if "Tags" in instances and len(instances["Tags"]) > 0:
-                                    metadata["InstanceName"] = get_instance_name(instances["Tags"])
+                                    instance_name = get_instance_name(instances["Tags"])
+                                    if instance_name:
+                                        metadata["InstanceName"] = instance_name
+                                if "PublicIpAddress" in instances:
+                                    metadata["PublicIpAddress"] = instances["PublicIpAddress"]
 
                                 finding = {
                                     "SchemaVersion": "2018-10-08",
