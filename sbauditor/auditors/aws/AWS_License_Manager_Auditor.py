@@ -61,7 +61,7 @@ def license_manager_hard_count_check(
                             "ProductFields": {"Product Name": "Day2SecurityBot"},
                             "Resources": [
                                 {
-                                    "Type": "Other",
+                                    "Type": "AwsLicenseManagerLicenseConfiguration",
                                     "Id": liscConfigArn,
                                     "Partition": awsPartition,
                                     "Region": awsRegion,
@@ -118,7 +118,7 @@ def license_manager_hard_count_check(
                             "ProductFields": {"Product Name": "Day2SecurityBot"},
                             "Resources": [
                                 {
-                                    "Type": "Other",
+                                    "Type": "AwsLicenseManagerLicenseConfiguration",
                                     "Id": liscConfigArn,
                                     "Partition": awsPartition,
                                     "Region": awsRegion,

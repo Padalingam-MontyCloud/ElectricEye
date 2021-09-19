@@ -56,7 +56,7 @@ def neptune_instance_multi_az_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -110,7 +110,7 @@ def neptune_instance_multi_az_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -166,7 +166,7 @@ def neptune_instance_storage_encryption_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "HIGH"},
                 "Confidence": 99,
-                "Title": "[Neptune.2] Neptune database instace storage should be encrypted",
+                "Title": "[Neptune.2] Neptune database instances storage should be encrypted",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " does not have storage encryption enabled. Refer to the remediation instructions to remediate this behavior",
@@ -179,7 +179,7 @@ def neptune_instance_storage_encryption_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -217,7 +217,7 @@ def neptune_instance_storage_encryption_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "INFORMATIONAL"},
                 "Confidence": 99,
-                "Title": "[Neptune.2] Neptune database instace storage should be encrypted",
+                "Title": "[Neptune.2] Neptune database instances storage should be encrypted",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " has storage encryption enabled.",
@@ -230,7 +230,7 @@ def neptune_instance_storage_encryption_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -280,7 +280,7 @@ def neptune_instance_iam_authentication_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "MEDIUM"},
                 "Confidence": 99,
-                "Title": "[Neptune.3] Neptune database instaces storage should use IAM Database Authentication",
+                "Title": "[Neptune.3] Neptune database instances storage should use IAM Database Authentication",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " does not use IAM Database Authentication. Refer to the remediation instructions to remediate this behavior",
@@ -293,7 +293,7 @@ def neptune_instance_iam_authentication_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -342,7 +342,7 @@ def neptune_instance_iam_authentication_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "INFORMATIONAL"},
                 "Confidence": 99,
-                "Title": "[Neptune.3] Neptune database instaces storage should use IAM Database Authentication",
+                "Title": "[Neptune.3] Neptune database instances storage should use IAM Database Authentication",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " uses IAM Database Authentication.",
@@ -355,7 +355,7 @@ def neptune_instance_iam_authentication_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsNeptuneInstance",
                         "Id": neptuneInstanceArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -435,7 +435,7 @@ def neptune_cluster_parameter_ssl_enforcement_check(
                         "ProductFields": {"Product Name": "Day2SecurityBot"},
                         "Resources": [
                             {
-                                "Type": "Other",
+                                "Type": "AwsNeptuneParameterGroup",
                                 "Id": parameterGroupArn,
                                 "Partition": awsPartition,
                                 "Region": awsRegion,
@@ -489,7 +489,7 @@ def neptune_cluster_parameter_ssl_enforcement_check(
                         "ProductFields": {"Product Name": "Day2SecurityBot"},
                         "Resources": [
                             {
-                                "Type": "Other",
+                                "Type": "AwsNeptuneParameterGroup",
                                 "Id": parameterGroupArn,
                                 "Partition": awsPartition,
                                 "Region": awsRegion,
@@ -565,7 +565,7 @@ def neptune_cluster_parameter_audit_log_check(
                         "ProductFields": {"Product Name": "Day2SecurityBot"},
                         "Resources": [
                             {
-                                "Type": "Other",
+                                "Type": "AwsNeptuneParameterGroup",
                                 "Id": parameterGroupArn,
                                 "Partition": awsPartition,
                                 "Region": awsRegion,
@@ -618,7 +618,7 @@ def neptune_cluster_parameter_audit_log_check(
                         "ProductFields": {"Product Name": "Day2SecurityBot"},
                         "Resources": [
                             {
-                                "Type": "Other",
+                                "Type": "AwsNeptuneParameterGroup",
                                 "Id": parameterGroupArn,
                                 "Partition": awsPartition,
                                 "Region": awsRegion,

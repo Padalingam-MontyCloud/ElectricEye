@@ -407,7 +407,7 @@ def workspaces_directory_default_internet_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsWorkspacesDirectory",
                         "Id": workspacesDirectoryArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -460,7 +460,7 @@ def workspaces_directory_default_internet_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsWorkspacesDirectory",
                         "Id": workspacesDirectoryArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,

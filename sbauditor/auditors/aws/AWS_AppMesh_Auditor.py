@@ -55,7 +55,7 @@ def appmesh_mesh_egress_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsAppMeshMesh",
                             "Id": meshArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -109,7 +109,7 @@ def appmesh_mesh_egress_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsAppMeshMesh",
                             "Id": meshArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -195,7 +195,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                             "ProductFields": {"Product Name": "Day2SecurityBot"},
                             "Resources": [
                                 {
-                                    "Type": "Other",
+                                    "Type": "AwsAppMeshVirtualNode",
                                     "Id": nodeArn,
                                     "Partition": awsPartition,
                                     "Region": awsRegion,
@@ -263,7 +263,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                                 "Resources": [
                                     {
-                                        "Type": "Other",
+                                        "Type": "AwsAppMeshVirtualNode",
                                         "Id": nodeArn,
                                         "Partition": awsPartition,
                                         "Region": awsRegion,
@@ -325,7 +325,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                                 "Resources": [
                                     {
-                                        "Type": "Other",
+                                        "Type": "AwsAppMeshVirtualNode",
                                         "Id": nodeArn,
                                         "Partition": awsPartition,
                                         "Region": awsRegion,
@@ -418,7 +418,7 @@ def appmesh_virt_node_listener_strict_tls_check(
                                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                                 "Resources": [
                                     {
-                                        "Type": "Other",
+                                        "Type": "AwsAppMeshVirtualNode",
                                         "Id": nodeArn,
                                         "Partition": awsPartition,
                                         "Region": awsRegion,
@@ -481,7 +481,7 @@ def appmesh_virt_node_listener_strict_tls_check(
                                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                                 "Resources": [
                                     {
-                                        "Type": "Other",
+                                        "Type": "AwsAppMeshVirtualNode",
                                         "Id": nodeArn,
                                         "Partition": awsPartition,
                                         "Region": awsRegion,
@@ -570,7 +570,7 @@ def appmesh_logging_check(
                         "ProductFields": {"Product Name": "Day2SecurityBot"},
                         "Resources": [
                             {
-                                "Type": "Other",
+                                "Type": "AwsAppMeshVirtualNode",
                                 "Id": nodeArn,
                                 "Partition": awsPartition,
                                 "Region": awsRegion,
@@ -633,7 +633,7 @@ def appmesh_logging_check(
                             "ProductFields": {"Product Name": "Day2SecurityBot"},
                             "Resources": [
                                 {
-                                    "Type": "Other",
+                                    "Type": "AwsAppMeshVirtualNode",
                                     "Id": nodeArn,
                                     "Partition": awsPartition,
                                     "Region": awsRegion,

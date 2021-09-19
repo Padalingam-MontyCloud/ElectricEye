@@ -56,7 +56,7 @@ def directory_service_radius_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsDirectoryServiceDirectory",
                             "Id": directoryArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -115,7 +115,7 @@ def directory_service_radius_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsDirectoryServiceDirectory",
                             "Id": directoryArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -191,7 +191,7 @@ def directory_service_cloudwatch_logs_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsDirectoryServiceDirectory",
                         "Id": directoryArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -243,7 +243,7 @@ def directory_service_cloudwatch_logs_check(
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsDirectoryServiceDirectory",
                         "Id": directoryArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
