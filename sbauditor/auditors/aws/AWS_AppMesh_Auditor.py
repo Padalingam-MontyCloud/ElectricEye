@@ -55,7 +55,7 @@ def appmesh_mesh_egress_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "AwsAppMeshMesh",
+                            "Type": "AWSAppMeshServiceMesh",
                             "Id": meshArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -109,7 +109,7 @@ def appmesh_mesh_egress_check(
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "AwsAppMeshMesh",
+                            "Type": "AWSAppMeshServiceMesh",
                             "Id": meshArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,

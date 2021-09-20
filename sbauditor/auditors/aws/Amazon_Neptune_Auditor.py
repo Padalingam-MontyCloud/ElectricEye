@@ -43,7 +43,7 @@ def neptune_instance_multi_az_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "LOW"},
                 "Confidence": 99,
-                "Title": "[Neptune.1] Neptune database instances should be configured to be highly available",
+                "Title": "[Neptune.1] Neptune database instance should be configured to be highly available",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " does not have Multi-AZ enabled and thus is not highly available. Refer to the remediation instructions to remediate this behavior",
@@ -97,7 +97,7 @@ def neptune_instance_multi_az_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "INFORMATIONAL"},
                 "Confidence": 99,
-                "Title": "[Neptune.1] Neptune database instances should be configured to be highly available",
+                "Title": "[Neptune.1] Neptune database instance should be configured to be highly available",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " is highly available.",
@@ -166,7 +166,7 @@ def neptune_instance_storage_encryption_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "HIGH"},
                 "Confidence": 99,
-                "Title": "[Neptune.2] Neptune database instances storage should be encrypted",
+                "Title": "[Neptune.2] Neptune database instance storage should be encrypted",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " does not have storage encryption enabled. Refer to the remediation instructions to remediate this behavior",
@@ -217,7 +217,7 @@ def neptune_instance_storage_encryption_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "INFORMATIONAL"},
                 "Confidence": 99,
-                "Title": "[Neptune.2] Neptune database instances storage should be encrypted",
+                "Title": "[Neptune.2] Neptune database instance storage should be encrypted",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " has storage encryption enabled.",
@@ -280,7 +280,7 @@ def neptune_instance_iam_authentication_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "MEDIUM"},
                 "Confidence": 99,
-                "Title": "[Neptune.3] Neptune database instances storage should use IAM Database Authentication",
+                "Title": "[Neptune.3] Neptune database instance storage should use IAM Database Authentication",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " does not use IAM Database Authentication. Refer to the remediation instructions to remediate this behavior",
@@ -342,7 +342,7 @@ def neptune_instance_iam_authentication_check(
                 "UpdatedAt": iso8601Time,
                 "Severity": {"Label": "INFORMATIONAL"},
                 "Confidence": 99,
-                "Title": "[Neptune.3] Neptune database instances storage should use IAM Database Authentication",
+                "Title": "[Neptune.3] Neptune database instance storage should use IAM Database Authentication",
                 "Description": "Neptune database instance "
                 + neptuneDbId
                 + " uses IAM Database Authentication.",
