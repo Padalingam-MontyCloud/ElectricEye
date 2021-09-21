@@ -56,7 +56,7 @@ def public_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsEc2Image",
                         "Id": amiArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -113,7 +113,7 @@ def public_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                 "ProductFields": {"Product Name": "Day2SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsEc2Image",
                         "Id": amiArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -189,7 +189,7 @@ def encrypted_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsEc2Image",
                             "Id": amiArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,
@@ -240,7 +240,7 @@ def encrypted_ami_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                     "ProductFields": {"Product Name": "Day2SecurityBot"},
                     "Resources": [
                         {
-                            "Type": "Other",
+                            "Type": "AwsEc2Image",
                             "Id": amiArn,
                             "Partition": awsPartition,
                             "Region": awsRegion,

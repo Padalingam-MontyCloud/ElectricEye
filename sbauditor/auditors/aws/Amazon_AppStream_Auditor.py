@@ -180,7 +180,7 @@ def public_image_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartit
             "ProductFields": {"Product Name": "SecurityBot"},
             "Resources": [
                 {
-                    "Type": "Other",
+                    "Type": "AwsAppStreamImage",
                     "Id": imageArn,
                     "Partition": awsPartition,
                     "Region": awsRegion,
@@ -253,7 +253,7 @@ def compromise_appstream_user_check(
                 "ProductFields": {"Product Name": "SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsAppStreamUser",
                         "Id": userArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -315,7 +315,7 @@ def compromise_appstream_user_check(
                 "ProductFields": {"Product Name": "SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsAppStreamUser",
                         "Id": userArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -391,7 +391,7 @@ def userpool_auth_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                 "ProductFields": {"Product Name": "SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsAppStreamUser",
                         "Id": userArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
@@ -450,7 +450,7 @@ def userpool_auth_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                 "ProductFields": {"Product Name": "SecurityBot"},
                 "Resources": [
                     {
-                        "Type": "Other",
+                        "Type": "AwsAppStreamUser",
                         "Id": userArn,
                         "Partition": awsPartition,
                         "Region": awsRegion,
