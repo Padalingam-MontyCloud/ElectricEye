@@ -6,6 +6,10 @@ FROM alpine@sha256:a15790640a6690aa1730c38cf0a440e2aa44aaca9b0e8931a9f2b0d7cc90f
 ENV PYTHONUNBUFFERED=1
 ENV SH_SCRIPTS_BUCKET=SH_SCRIPTS_BUCKET
 ENV PluginNames=PluginNames
+ENV CustomerId=CustomerId
+ENV AccountNumber=AccountNumber
+ENV Region=Region
+ENV ExternalId=ExternalId
 
 LABEL maintainer="https://montycloud.com/ElectricEye" \
     version="2.0" \
@@ -27,5 +31,5 @@ RUN \
 CMD \
     echo ${PluginNames} && \
     aws s3 cp s3://${SH_SCRIPTS_BUCKET}/ ./sbauditor/auditors/aws --recursive && \
-    python3 sbauditor/controller.py -a ${PluginNames}
+    python3 sbauditor/controller.py -a ${PluginNames} -e ${CustomerId} -f ${AccountNumber} -r ${Region} -g ${ExternalId}
 
