@@ -50,7 +50,7 @@ def cluster_public_access_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#modify-cluster",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -105,7 +105,7 @@ def cluster_public_access_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#modify-cluster",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -174,7 +174,7 @@ def cluster_encryption_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -223,7 +223,7 @@ def cluster_encryption_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-db-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -283,7 +283,7 @@ def cluster_enhanced_vpc_routing_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -335,7 +335,7 @@ def cluster_enhanced_vpc_routing_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -400,7 +400,7 @@ def cluster_logging_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",
@@ -450,7 +450,7 @@ def cluster_logging_check(
                         "Url": "https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRedshiftCluster",

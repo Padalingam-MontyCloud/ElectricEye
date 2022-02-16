@@ -69,7 +69,7 @@ def cognitoidp_cis_password_check(
                         "Url": "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsCognitoUserPool",

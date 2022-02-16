@@ -56,7 +56,7 @@ def emr_cluster_security_configuration_check(
                         "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-security-configurations.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEmrCluster",
@@ -127,7 +127,7 @@ def emr_cluster_security_configuration_check(
                             "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-security-configurations.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEmrCluster",
@@ -226,7 +226,7 @@ def emr_security_config_encryption_in_transit_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-intransit",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -287,7 +287,7 @@ def emr_security_config_encryption_in_transit_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-intransit",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -384,7 +384,7 @@ def emr_security_config_encryption_at_rest_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-s3",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -440,7 +440,7 @@ def emr_security_config_encryption_at_rest_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-s3",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -534,7 +534,7 @@ def emr_security_config_config_ebs_encryption_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-localdisk",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -590,7 +590,7 @@ def emr_security_config_config_ebs_encryption_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-localdisk",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -648,7 +648,7 @@ def emr_security_config_config_ebs_encryption_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-data-encryption-options.html#emr-encryption-localdisk",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -735,7 +735,7 @@ def emr_security_config_kerberos_check(
                                 "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEmrCluster",
@@ -804,7 +804,7 @@ def emr_security_config_kerberos_check(
                                     "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsEmrCluster",
@@ -897,7 +897,7 @@ def emr_cluster_termination_protection_check(
                             "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEmrCluster",
@@ -953,7 +953,7 @@ def emr_cluster_termination_protection_check(
                             "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/UsingEMR_TerminationProtection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEmrCluster",
@@ -1028,7 +1028,7 @@ def emr_cluster_logging_check(
                         "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEmrCluster",
@@ -1087,7 +1087,7 @@ def emr_cluster_logging_check(
                             "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEmrCluster",
@@ -1159,7 +1159,7 @@ def emr_cluster_block_secgroup_check(
                         "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-block-public-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -1214,7 +1214,7 @@ def emr_cluster_block_secgroup_check(
                         "Url": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-block-public-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",

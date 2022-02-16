@@ -62,7 +62,7 @@ def firehose_delivery_stream_encryption_check(
                             "Url": "https://docs.aws.amazon.com/firehose/latest/dev/encryption.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKinesisFirehoseDeliveryStream",
@@ -113,7 +113,7 @@ def firehose_delivery_stream_encryption_check(
                             "Url": "https://docs.aws.amazon.com/firehose/latest/dev/encryption.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKinesisFirehoseDeliveryStream",

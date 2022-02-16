@@ -53,7 +53,7 @@ def efs_filesys_encryption_check(
                         "Url": "https://docs.aws.amazon.com/efs/latest/ug/encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsElasticFileSystem",
@@ -102,7 +102,7 @@ def efs_filesys_encryption_check(
                         "Url": "https://docs.aws.amazon.com/efs/latest/ug/encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsElasticFileSystem",

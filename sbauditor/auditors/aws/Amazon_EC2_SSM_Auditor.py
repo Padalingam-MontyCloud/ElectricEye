@@ -66,7 +66,7 @@ def ec2_instance_ssm_managed_check(
                                 "Url": "https://docs.aws.amazon.com/en_us/systems-manager/latest/userguide/systems-manager-setting-up.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -124,7 +124,7 @@ def ec2_instance_ssm_managed_check(
                                 "Url": "https://docs.aws.amazon.com/en_us/systems-manager/latest/userguide/systems-manager-setting-up.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -211,7 +211,7 @@ def ssm_instace_agent_update_check(
                                 "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent-automatic-updates.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -269,7 +269,7 @@ def ssm_instace_agent_update_check(
                                 "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent-automatic-updates.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -354,7 +354,7 @@ def ssm_instance_association_check(
                                 "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-associations.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -412,7 +412,7 @@ def ssm_instance_association_check(
                                 "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-associations.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -498,7 +498,7 @@ def ssm_instance_patch_state_state(
                                 "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Instance",
@@ -563,7 +563,7 @@ def ssm_instance_patch_state_state(
                                         "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEc2Instance",
@@ -623,7 +623,7 @@ def ssm_instance_patch_state_state(
                                         "Url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-patch.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEc2Instance",

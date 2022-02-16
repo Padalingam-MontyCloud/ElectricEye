@@ -55,7 +55,7 @@ def workspaces_user_volume_encryption_check(
                             "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/encrypt-workspaces.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsWorkspacesWorkspace",
@@ -106,7 +106,7 @@ def workspaces_user_volume_encryption_check(
                             "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/encrypt-workspaces.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsWorkspacesWorkspace",
@@ -175,7 +175,7 @@ def workspaces_root_volume_encryption_check(
                             "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/encrypt-workspaces.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsWorkspacesWorkspace",
@@ -226,7 +226,7 @@ def workspaces_root_volume_encryption_check(
                             "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/encrypt-workspaces.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsWorkspacesWorkspace",
@@ -291,7 +291,7 @@ def workspaces_running_mode_check(
                         "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html#stop-start-workspace",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsWorkspacesWorkspace",
@@ -341,7 +341,7 @@ def workspaces_running_mode_check(
                         "Url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html#stop-start-workspace",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsWorkspacesWorkspace",
@@ -404,7 +404,7 @@ def workspaces_directory_default_internet_check(
                         "Url": "https://docs.amazonaws.cn/en_us/workspaces/latest/adminguide/amazon-workspaces-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsWorkspacesDirectory",
@@ -457,7 +457,7 @@ def workspaces_directory_default_internet_check(
                         "Url": "https://docs.amazonaws.cn/en_us/workspaces/latest/adminguide/amazon-workspaces-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsWorkspacesDirectory",

@@ -58,7 +58,7 @@ def kms_key_rotation_check(
                         "Url": "https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsKmsKey",
@@ -98,7 +98,7 @@ def kms_key_rotation_check(
                         "Url": "https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsKmsKey",
@@ -166,7 +166,7 @@ def kms_key_exposed_check(
                             "Url": "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKmsAlias",
@@ -206,7 +206,7 @@ def kms_key_exposed_check(
                             "Url": "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKmsAlias",

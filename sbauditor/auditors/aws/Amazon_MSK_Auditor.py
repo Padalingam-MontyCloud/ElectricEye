@@ -51,7 +51,7 @@ def inter_cluster_encryption_in_transit_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-working-with-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -104,7 +104,7 @@ def inter_cluster_encryption_in_transit_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-working-with-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -172,7 +172,7 @@ def client_broker_encryption_in_transit_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-working-with-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -225,7 +225,7 @@ def client_broker_encryption_in_transit_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-working-with-encryption.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -293,7 +293,7 @@ def client_authentication_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-authentication.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -346,7 +346,7 @@ def client_authentication_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-authentication.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -412,7 +412,7 @@ def cluster_enhanced_monitoring_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",
@@ -462,7 +462,7 @@ def cluster_enhanced_monitoring_check(
                         "Url": "https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsManagedKafkaCluster",

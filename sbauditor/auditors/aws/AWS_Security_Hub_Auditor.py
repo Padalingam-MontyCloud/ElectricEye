@@ -59,7 +59,7 @@ def high_critical_findings(
             "Title": "[SecurityHub.1] Security Hub should not have active high or critical severity findings from AWS services",
             "Description": "High or critical findings were not found in the Security Hub hub for AWS account "
             + awsAccountId,
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -100,7 +100,7 @@ def high_critical_findings(
             "Title": "[SecurityHub.1] Security Hub should not have active high or critical severity findings from AWS services",
             "Description": "High or critical findings were found in the Security Hub hub for AWS account "
             + awsAccountId,
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",

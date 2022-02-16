@@ -51,7 +51,7 @@ def default_internet_access_check(
                         "Url": "https://docs.aws.amazon.com/appstream2/latest/developerguide/internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAppStreamFleet",

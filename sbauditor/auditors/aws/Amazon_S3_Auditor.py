@@ -5,13 +5,34 @@ from check_register import CheckRegister
 registry = CheckRegister()
 # import boto3 clients
 s3 = boto3.client("s3")
+region = s3.meta.region_name
 s3control = boto3.client("s3control")
+
+
+def get_bucket_location(bucket_name):
+    try:
+        response = s3.get_bucket_location(Bucket=bucket_name)
+        if response["LocationConstraint"]:
+            return response["LocationConstraint"]
+        return "us-east-1"
+    except Exception as e:
+        print(f"Exception in getting the bucket location {str(e)}")
+
+
 # loop through s3 buckets
 def list_buckets(cache):
     response = cache.get("list_buckets")
     if response:
         return response
-    cache["list_buckets"] = s3.list_buckets()
+    list_of_bucket = s3.list_buckets()
+    bucket_dict = {"Buckets":[]}
+    for bucket in list_of_bucket["Buckets"]:
+        if region == get_bucket_location(bucket["Name"]):
+            bucket_dict["Buckets"].append({
+                "Name": bucket["Name"],
+                "CreationDate": bucket["CreationDate"]
+            })
+    cache["list_buckets"] = bucket_dict
     return cache["list_buckets"]
 
 
@@ -61,7 +82,7 @@ def bucket_encryption_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -115,7 +136,7 @@ def bucket_encryption_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -182,7 +203,7 @@ def bucket_lifecycle_check(
                         "Url": "https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-lifecycle.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsS3Bucket",
@@ -241,7 +262,7 @@ def bucket_lifecycle_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-lifecycle.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -315,7 +336,7 @@ def bucket_versioning_check(
                         "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsS3Bucket",
@@ -371,7 +392,7 @@ def bucket_versioning_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -448,7 +469,7 @@ def bucket_policy_allows_public_access_check(
                                 "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsS3Bucket",
@@ -504,7 +525,7 @@ def bucket_policy_allows_public_access_check(
                                 "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsS3Bucket",
@@ -581,7 +602,7 @@ def bucket_policy_check(
                         "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsS3Bucket",
@@ -640,7 +661,7 @@ def bucket_policy_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -714,7 +735,7 @@ def bucket_access_logging_check(
                         "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsS3Bucket",
@@ -768,7 +789,7 @@ def bucket_access_logging_check(
                             "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsS3Bucket",
@@ -839,7 +860,7 @@ def s3_account_level_block(
                     "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -895,7 +916,7 @@ def s3_account_level_block(
                     "Url": "https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",

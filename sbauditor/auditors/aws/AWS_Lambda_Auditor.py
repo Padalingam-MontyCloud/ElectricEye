@@ -66,7 +66,7 @@ def unused_function_check(
                             "Url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsLambda",
@@ -115,7 +115,7 @@ def unused_function_check(
                             "Url": "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsLambda",

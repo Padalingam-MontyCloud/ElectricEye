@@ -66,7 +66,7 @@ def unhealthy_endpoint_group_check(
                                     "Url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoints.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsGlobalAcceleratorEndpoint",
@@ -117,7 +117,7 @@ def unhealthy_endpoint_group_check(
                                     "Url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoints.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsGlobalAcceleratorEndpoint",
@@ -190,7 +190,7 @@ def flow_logs_enabled_check(
                         "Url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/monitoring-global-accelerator.flow-logs.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsGlobalAcceleratorAccelerator",
@@ -243,7 +243,7 @@ def flow_logs_enabled_check(
                         "Url": "https://docs.aws.amazon.com/global-accelerator/latest/dg/monitoring-global-accelerator.flow-logs.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsGlobalAcceleratorAccelerator",

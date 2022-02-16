@@ -52,7 +52,7 @@ def appmesh_mesh_egress_check(
                             "Url": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_EgressFilter.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AWSAppMeshServiceMesh",
@@ -106,7 +106,7 @@ def appmesh_mesh_egress_check(
                             "Url": "https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_EgressFilter.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AWSAppMeshServiceMesh",
@@ -192,7 +192,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                                     "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsAppMeshVirtualNode",
@@ -260,7 +260,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                                         "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsAppMeshVirtualNode",
@@ -322,7 +322,7 @@ def appmesh_virt_node_backed_default_tls_policy_check(
                                         "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsAppMeshVirtualNode",
@@ -415,7 +415,7 @@ def appmesh_virt_node_listener_strict_tls_check(
                                         "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsAppMeshVirtualNode",
@@ -478,7 +478,7 @@ def appmesh_virt_node_listener_strict_tls_check(
                                         "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual-node-tls.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsAppMeshVirtualNode",
@@ -567,7 +567,7 @@ def appmesh_logging_check(
                                 "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html#vn-create-virtual-node",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsAppMeshVirtualNode",
@@ -630,7 +630,7 @@ def appmesh_logging_check(
                                     "Url": "https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html#vn-create-virtual-node",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsAppMeshVirtualNode",

@@ -44,7 +44,7 @@ def iam_access_analyzer_detector_check(
                     "Url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -92,7 +92,7 @@ def iam_access_analyzer_detector_check(
                     "Url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#access-analyzer-enabling",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -154,7 +154,7 @@ def guard_duty_detector_check(
                     "Url": "https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_settingup.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -202,7 +202,7 @@ def guard_duty_detector_check(
                     "Url": "https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_settingup.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -266,7 +266,7 @@ def detective_graph_check(
                         "Url": "https://docs.aws.amazon.com/detective/latest/adminguide/detective-setup.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -316,7 +316,7 @@ def detective_graph_check(
                         "Url": "https://docs.aws.amazon.com/detective/latest/adminguide/detective-setup.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -385,7 +385,7 @@ def macie_in_use_check(
                         "Url": "https://docs.aws.amazon.com/detective/latest/adminguide/detective-setup.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -422,7 +422,7 @@ def macie_in_use_check(
                         "Url": "https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",

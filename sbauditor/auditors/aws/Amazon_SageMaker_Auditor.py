@@ -47,7 +47,7 @@ def sagemaker_notebook_encryption_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -98,7 +98,7 @@ def sagemaker_notebook_encryption_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -164,7 +164,7 @@ def sagemaker_notebook_direct_internet_access_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-notebook-and-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -219,7 +219,7 @@ def sagemaker_notebook_direct_internet_access_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-notebook-and-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -290,7 +290,7 @@ def sagemaker_notebook_in_vpc_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-notebook-and-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -343,7 +343,7 @@ def sagemaker_notebook_in_vpc_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-notebook-and-internet-access.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerNotebookInstance",
@@ -412,7 +412,7 @@ def sagemaker_endpoint_encryption_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerEndpoint",
@@ -463,7 +463,7 @@ def sagemaker_endpoint_encryption_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerEndpoint",
@@ -529,7 +529,7 @@ def sagemaker_model_network_isolation_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/mkt-algo-model-internet-free.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerModel",
@@ -582,7 +582,7 @@ def sagemaker_model_network_isolation_check(
                         "Url": "https://docs.aws.amazon.com/sagemaker/latest/dg/mkt-algo-model-internet-free.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsSagemakerModel",

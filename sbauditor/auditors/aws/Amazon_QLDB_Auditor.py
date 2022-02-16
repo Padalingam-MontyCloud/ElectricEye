@@ -54,7 +54,7 @@ def qldb_deletion_protection_check(
                             "Url": "https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-management.basics.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsQldbLedger",
@@ -109,7 +109,7 @@ def qldb_deletion_protection_check(
                             "Url": "https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-management.basics.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsQldbLedger",
@@ -185,7 +185,7 @@ def qldb_export_export_encryption_check(
                             "Url": "https://docs.aws.amazon.com/qldb/latest/developerguide/export-journal.request.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsQldbExport",
@@ -232,7 +232,7 @@ def qldb_export_export_encryption_check(
                             "Url": "https://docs.aws.amazon.com/qldb/latest/developerguide/export-journal.request.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsQldbExport",

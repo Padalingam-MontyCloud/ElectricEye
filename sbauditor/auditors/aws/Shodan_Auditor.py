@@ -74,7 +74,7 @@ else:
                                 "Description": "EC2 instance "
                                 + ec2Id
                                 + " has not been indexed by Shodan.",
-                                "ProductFields": {"Product Name": "ElectricEye"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEc2Instance",
@@ -134,7 +134,7 @@ else:
                                 + ec2PublicIp
                                 + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your host.",
                                 "SourceUrl": "https://www.shodan.io/host/" + ec2PublicIp,
-                                "ProductFields": {"Product Name": "ElectricEye"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "ThreatIntelIndicators": [
                                     {
                                         "Type": "IPV4_ADDRESS",
@@ -231,7 +231,7 @@ else:
                             "Severity": {"Label": "INFORMATIONAL"},
                             "Title": "[Shodan.ELBv2.1] Internet-facing Application Load Balancers should be monitored for being indexed by Shodan",
                             "Description": "ALB " + elbv2Name + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbv2LoadBalancer",
@@ -292,7 +292,7 @@ else:
                             + elbv2Dns
                             + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your load balancer.",
                             "SourceUrl": "https://www.shodan.io/host/" + elbv2Ip,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",
@@ -388,7 +388,7 @@ else:
                             "Description": "RDS instance "
                             + rdsInstanceId
                             + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsRdsDbInstance",
@@ -450,7 +450,7 @@ else:
                             + rdsDns
                             + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your database.",
                             "SourceUrl": "https://www.shodan.io/host/" + rdsIp,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",
@@ -555,7 +555,7 @@ else:
                                     "Description": "ElasticSearch Service domain "
                                     + esDomainName
                                     + " has not been indexed by Shodan.",
-                                    "ProductFields": {"Product Name": "ElectricEye"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsElasticsearchDomain",
@@ -619,7 +619,7 @@ else:
                                     + esDomainEndpoint
                                     + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your ES domain.",
                                     "SourceUrl": "https://www.shodan.io/host/" + esDomainIp,
-                                    "ProductFields": {"Product Name": "ElectricEye"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "ThreatIntelIndicators": [
                                         {
                                             "Type": "IPV4_ADDRESS",
@@ -716,7 +716,7 @@ else:
                             "Description": "ElasticSearch Service domain "
                             + clbName
                             + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbLoadBalancer",
@@ -773,7 +773,7 @@ else:
                             + clbDnsName
                             + ". Review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your load balancer.",
                             "SourceUrl": "https://www.shodan.io/host/" + clbIp,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",
@@ -859,7 +859,7 @@ else:
                             "Description": "DMS Replication Instance "
                             + dmsInstanceId
                             + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDmsReplicationInstance",
@@ -914,7 +914,7 @@ else:
                             + dmsInstanceId
                             + " . Review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your replication instance.",
                             "SourceUrl": "https://www.shodan.io/host/" + dmsPublicIp,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",
@@ -1007,7 +1007,7 @@ else:
                                     "Description": "Amazon MQ message brokers "
                                     + brokerName
                                     + " has not been indexed by Shodan.",
-                                    "ProductFields": {"Product Name": "ElectricEye"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsMqMessageBroker",
@@ -1066,7 +1066,7 @@ else:
                                     + " has been indexed by Shodan on IP address "
                                     + mqBrokerIpv4
                                     + ".",
-                                    "ProductFields": {"Product Name": "ElectricEye"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsMqMessageBroker",
@@ -1145,7 +1145,7 @@ else:
                             "Description": "CloudFront Distribution "
                             + cfId
                             + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsCloudFrontDistribution",
@@ -1201,7 +1201,7 @@ else:
                             + cfDomainIp
                             + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your host.",
                             "SourceUrl": "https://www.shodan.io/host/" + cfDomainIp,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",
@@ -1288,7 +1288,7 @@ else:
                             "Description": "Accelerator "
                             + gaxName
                             + " has not been indexed by Shodan.",
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsGlobalAcceleratorAccelerator",
@@ -1345,7 +1345,7 @@ else:
                             + gaxDomainIp
                             + ". review the Shodan.io host information in the SourceUrl or ThreatIntelIndicators.SourceUrl fields for information about what ports and services are exposed and then take action to reduce exposure and harden your host.",
                             "SourceUrl": "https://www.shodan.io/host/" + gaxDomainIp,
-                            "ProductFields": {"Product Name": "ElectricEye"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "ThreatIntelIndicators": [
                                 {
                                     "Type": "IPV4_ADDRESS",

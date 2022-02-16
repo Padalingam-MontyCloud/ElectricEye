@@ -53,7 +53,7 @@ def docdb_public_instance_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/connect-from-outside-a-vpc.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbInstance",
@@ -341,7 +341,7 @@ def docdb_instance_audit_logging_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/event-auditing.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbInstance",
@@ -408,7 +408,7 @@ def docdb_cluster_multiaz_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-fault-tolerance.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbCluster",
@@ -462,7 +462,7 @@ def docdb_cluster_multiaz_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-fault-tolerance.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbCluster",
@@ -531,7 +531,7 @@ def docdb_cluster_deletion_protection_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-delete.html#db-cluster-deletion-protection",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbCluster",
@@ -585,7 +585,7 @@ def docdb_cluster_deletion_protection_check(
                         "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-delete.html#db-cluster-deletion-protection",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDocumentDbCluster",
@@ -666,7 +666,7 @@ def documentdb_parameter_group_audit_log_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/event-auditing.html#event-auditing-enabling-auditing",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbParameterGroup",
@@ -723,7 +723,7 @@ def documentdb_parameter_group_audit_log_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/event-auditing.html#event-auditing-enabling-auditing",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbParameterGroup",
@@ -808,7 +808,7 @@ def documentdb_parameter_group_tls_enforcement_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbParameterGroup",
@@ -866,7 +866,7 @@ def documentdb_parameter_group_tls_enforcement_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbParameterGroup",
@@ -946,7 +946,7 @@ def documentdb_cluster_snapshot_encryption_check(
                             "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/encryption-at-rest.html#encryption-at-rest-limits",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsDocumentDbSnapshot",
@@ -997,7 +997,7 @@ def documentdb_cluster_snapshot_encryption_check(
                             "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/encryption-at-rest.html#encryption-at-rest-limits",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsDocumentDbSnapshot",
@@ -1076,7 +1076,7 @@ def documentdb_cluster_snapshot_public_share_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/backup-restore.db-cluster-snapshot-share.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbSnapshot",
@@ -1134,7 +1134,7 @@ def documentdb_cluster_snapshot_public_share_check(
                                     "Url": "https://docs.aws.amazon.com/documentdb/latest/developerguide/backup-restore.db-cluster-snapshot-share.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsDocumentDbSnapshot",
