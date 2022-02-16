@@ -57,7 +57,7 @@ def cloudfront_active_trusted_signers_check(
                             "Url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsCloudFrontDistribution",

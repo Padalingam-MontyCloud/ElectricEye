@@ -54,7 +54,7 @@ def eks_public_endpoint_access_check(
                             "Url": "https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEksCluster",
@@ -111,7 +111,7 @@ def eks_public_endpoint_access_check(
                             "Url": "https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEksCluster",
@@ -189,7 +189,7 @@ def eks_latest_k8s_version_check(
                             "Url": "https://docs.aws.amazon.com/eks/latest/userguide/update-cluster.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEksCluster",
@@ -240,7 +240,7 @@ def eks_latest_k8s_version_check(
                             "Url": "https://docs.aws.amazon.com/eks/latest/userguide/update-cluster.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEksCluster",
@@ -321,7 +321,7 @@ def eks_logging_audit_auth_check(
                                         "Url": "https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEksCluster",
@@ -375,7 +375,7 @@ def eks_logging_audit_auth_check(
                                         "Url": "https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEksCluster",

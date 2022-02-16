@@ -75,7 +75,7 @@ def security_group_all_open_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -134,7 +134,7 @@ def security_group_all_open_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -235,7 +235,7 @@ def security_group_open_ftp_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -296,7 +296,7 @@ def security_group_open_ftp_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -396,7 +396,7 @@ def security_group_open_telnet_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -457,7 +457,7 @@ def security_group_open_telnet_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -565,7 +565,7 @@ def security_group_open_dcom_rpc_check(
                                 "SourceUrl": "https://www.symantec.com/security_response/attacksignatures/detail.jsp?asid=20387",
                             }
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -634,7 +634,7 @@ def security_group_open_dcom_rpc_check(
                                 "SourceUrl": "https://www.symantec.com/security_response/attacksignatures/detail.jsp?asid=20387",
                             }
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -748,7 +748,7 @@ def security_group_open_smb_check(
                                 "SourceUrl": "https://medium.com/@melvinshb/how-to-use-eternalblue-to-exploit-smb-port-using-public-wi-fi-79a996821767",
                             },
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -823,7 +823,7 @@ def security_group_open_smb_check(
                                 "SourceUrl": "https://medium.com/@melvinshb/how-to-use-eternalblue-to-exploit-smb-port-using-public-wi-fi-79a996821767",
                             },
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -943,7 +943,7 @@ def security_group_open_mssql_check(
                                 "SourceUrl": "https://www.rapid7.com/db/vulnerabilities/msft-cve-2018-8273",
                             },
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1024,7 +1024,7 @@ def security_group_open_mssql_check(
                                 "SourceUrl": "https://www.rapid7.com/db/vulnerabilities/msft-cve-2018-8273",
                             },
                         ],
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1124,7 +1124,7 @@ def security_group_open_oracle_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1185,7 +1185,7 @@ def security_group_open_oracle_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1288,7 +1288,7 @@ def security_group_open_mysql_mariadb_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1352,7 +1352,7 @@ def security_group_open_mysql_mariadb_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1452,7 +1452,7 @@ def security_group_open_rdp_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -1527,7 +1527,7 @@ def security_group_open_rdp_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -1641,7 +1641,7 @@ def security_group_open_postgresql_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1702,7 +1702,7 @@ def security_group_open_postgresql_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -1802,7 +1802,7 @@ def security_group_open_kibana_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -1877,7 +1877,7 @@ def security_group_open_kibana_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -1991,7 +1991,7 @@ def security_group_open_redis_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2066,7 +2066,7 @@ def security_group_open_redis_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2180,7 +2180,7 @@ def security_group_open_splunkd_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2255,7 +2255,7 @@ def security_group_open_splunkd_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2372,7 +2372,7 @@ def security_group_open_elasticsearch1_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -2436,7 +2436,7 @@ def security_group_open_elasticsearch1_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -2539,7 +2539,7 @@ def security_group_open_elasticsearch2_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -2603,7 +2603,7 @@ def security_group_open_elasticsearch2_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -2708,7 +2708,7 @@ def security_group_open_memcached_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2788,7 +2788,7 @@ def security_group_open_memcached_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "ThreatIntelIndicators": [
                             {
                                 "Category": "BACKDOOR",
@@ -2902,7 +2902,7 @@ def security_group_open_redshift_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -2963,7 +2963,7 @@ def security_group_open_redshift_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3063,7 +3063,7 @@ def security_group_open_documentdb_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3124,7 +3124,7 @@ def security_group_open_documentdb_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3224,7 +3224,7 @@ def security_group_open_cassandra_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3285,7 +3285,7 @@ def security_group_open_cassandra_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3385,7 +3385,7 @@ def security_group_open_kafka_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",
@@ -3446,7 +3446,7 @@ def security_group_open_kafka_check(
                                 "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2SecurityGroup",

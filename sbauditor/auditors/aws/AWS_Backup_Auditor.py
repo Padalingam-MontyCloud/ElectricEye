@@ -46,7 +46,7 @@ def volume_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEc2Volume",
@@ -100,7 +100,7 @@ def volume_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsParti
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEc2Volume",
@@ -175,7 +175,7 @@ def ec2_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                             "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEc2Instance",
@@ -236,7 +236,7 @@ def ec2_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                             "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEc2Instance",
@@ -309,7 +309,7 @@ def ddb_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDynamoDbTable",
@@ -363,7 +363,7 @@ def ddb_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDynamoDbTable",
@@ -450,7 +450,7 @@ def reds_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartiti
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRdsDbInstance",
@@ -510,7 +510,7 @@ def reds_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartiti
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsRdsDbInstance",
@@ -581,7 +581,7 @@ def efs_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsElasticFileSystem",
@@ -635,7 +635,7 @@ def efs_backup_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                         "Url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/create-a-scheduled-backup.html#assign-resources-to-plan",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsElasticFileSystem",

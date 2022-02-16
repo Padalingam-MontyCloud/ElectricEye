@@ -53,7 +53,7 @@ def directory_service_radius_check(
                             "Url": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_prereqs.html#prereq_mfa_ad",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsDirectoryServiceDirectory",
@@ -112,7 +112,7 @@ def directory_service_radius_check(
                             "Url": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_prereqs.html#prereq_mfa_ad",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsDirectoryServiceDirectory",
@@ -188,7 +188,7 @@ def directory_service_cloudwatch_logs_check(
                         "Url": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_enable_log_forwarding.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDirectoryServiceDirectory",
@@ -240,7 +240,7 @@ def directory_service_cloudwatch_logs_check(
                         "Url": "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_enable_log_forwarding.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDirectoryServiceDirectory",

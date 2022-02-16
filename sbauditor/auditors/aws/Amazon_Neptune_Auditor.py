@@ -53,7 +53,7 @@ def neptune_instance_multi_az_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/feature-overview-availability.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -107,7 +107,7 @@ def neptune_instance_multi_az_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/feature-overview-availability.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -176,7 +176,7 @@ def neptune_instance_storage_encryption_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/encrypt.html#encrypt-enable",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -227,7 +227,7 @@ def neptune_instance_storage_encryption_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/encrypt.html#encrypt-enable",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -290,7 +290,7 @@ def neptune_instance_iam_authentication_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -352,7 +352,7 @@ def neptune_instance_iam_authentication_check(
                         "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsNeptuneInstance",
@@ -432,7 +432,7 @@ def neptune_cluster_parameter_ssl_enforcement_check(
                                 "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/security-ssl.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsNeptuneParameterGroup",
@@ -486,7 +486,7 @@ def neptune_cluster_parameter_ssl_enforcement_check(
                                 "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/security-ssl.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsNeptuneParameterGroup",
@@ -562,7 +562,7 @@ def neptune_cluster_parameter_audit_log_check(
                                 "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/auditing.html#auditing-enable",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsNeptuneParameterGroup",
@@ -615,7 +615,7 @@ def neptune_cluster_parameter_audit_log_check(
                                 "Url": "https://docs.aws.amazon.com/neptune/latest/userguide/auditing.html#auditing-enable",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsNeptuneParameterGroup",

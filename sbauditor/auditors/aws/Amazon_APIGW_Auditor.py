@@ -60,7 +60,7 @@ def api_gateway_stage_metrics_enabled_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/monitoring-cloudwatch.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -122,7 +122,7 @@ def api_gateway_stage_metrics_enabled_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/monitoring-cloudwatch.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -204,7 +204,7 @@ def api_gateway_stage_logging_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -266,7 +266,7 @@ def api_gateway_stage_logging_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -348,7 +348,7 @@ def api_gateway_stage_cacheing_enabled_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -412,7 +412,7 @@ def api_gateway_stage_cacheing_enabled_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -500,7 +500,7 @@ def api_gateway_stage_cache_encryption_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html#override-api-gateway-stage-cache-for-method-cache",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -561,7 +561,7 @@ def api_gateway_stage_cache_encryption_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html#override-api-gateway-stage-cache-for-method-cache",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -635,7 +635,7 @@ def api_gateway_stage_xray_tracking_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-tracing.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -697,7 +697,7 @@ def api_gateway_stage_xray_tracking_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-tracing.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -779,7 +779,7 @@ def api_gateway_stage_waf_check_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-setup-waf.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",
@@ -843,7 +843,7 @@ def api_gateway_stage_waf_check_check(
                                 "Url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-setup-waf.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsApiGatewayRestApi",

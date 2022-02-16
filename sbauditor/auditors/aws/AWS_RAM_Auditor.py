@@ -69,7 +69,7 @@ def ram_resource_shares_status_check(
                             "Url": "https://docs.aws.amazon.com/ram/latest/userguide/working-with-shared.html#working-with-shared-view-rs",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsResourceAccessManagerShare",
@@ -120,7 +120,7 @@ def ram_resource_shares_status_check(
                             "Url": "https://docs.aws.amazon.com/ram/latest/userguide/working-with-shared.html#working-with-shared-view-rs",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsResourceAccessManagerShare",
@@ -184,7 +184,7 @@ def ram_allow_external_principals_check(
                         "Url": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsResourceAccessManagerShare",
@@ -239,7 +239,7 @@ def ram_allow_external_principals_check(
                         "Url": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsResourceAccessManagerShare",

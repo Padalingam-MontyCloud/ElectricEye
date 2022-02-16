@@ -41,7 +41,7 @@ def dms_replication_instance_public_access_check(
                         "Url": "https://aws.amazon.com/premiumsupport/knowledge-center/dms-disable-public-access/",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",
@@ -95,7 +95,7 @@ def dms_replication_instance_public_access_check(
                         "Url": "https://aws.amazon.com/premiumsupport/knowledge-center/dms-disable-public-access/",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",
@@ -162,7 +162,7 @@ def dms_replication_instance_multi_az_check(
                         "Url": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",
@@ -216,7 +216,7 @@ def dms_replication_instance_multi_az_check(
                         "Url": "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",
@@ -283,7 +283,7 @@ def dms_replication_instance_minor_version_update_check(
                         "Url": "https://docs.amazonaws.cn/en_us/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.Maintenance",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",
@@ -335,7 +335,7 @@ def dms_replication_instance_minor_version_update_check(
                         "Url": "https://docs.amazonaws.cn/en_us/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.Maintenance",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsDmsReplicationInstance",

@@ -58,7 +58,7 @@ def license_manager_hard_count_check(
                                     "Url": "https://docs.aws.amazon.com/license-manager/latest/userguide/config-overview.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsLicenseManagerLicenseConfiguration",
@@ -115,7 +115,7 @@ def license_manager_hard_count_check(
                                     "Url": "https://docs.aws.amazon.com/license-manager/latest/userguide/config-overview.html",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsLicenseManagerLicenseConfiguration",

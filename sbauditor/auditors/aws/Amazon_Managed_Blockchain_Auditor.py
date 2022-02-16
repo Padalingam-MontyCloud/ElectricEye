@@ -78,7 +78,7 @@ def amb_fabric_node_chaincode_logging_check(
                                             "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsManagedBlockchainPeerNode",
@@ -139,7 +139,7 @@ def amb_fabric_node_chaincode_logging_check(
                                             "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsManagedBlockchainPeerNode",
@@ -243,7 +243,7 @@ def amb_fabric_node_peernode_logging_check(
                                             "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsManagedBlockchainPeerNode",
@@ -304,7 +304,7 @@ def amb_fabric_node_peernode_logging_check(
                                             "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsManagedBlockchainPeerNode",
@@ -399,7 +399,7 @@ def amb_fabric_member_ca_logging_check(
                                     "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsManagedBlockchainMember",
@@ -458,7 +458,7 @@ def amb_fabric_member_ca_logging_check(
                                     "Url": "https://docs.aws.amazon.com/managed-blockchain/latest/managementguide/monitoring-cloudwatch-logs.html#monitoring-enable",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsManagedBlockchainMember",

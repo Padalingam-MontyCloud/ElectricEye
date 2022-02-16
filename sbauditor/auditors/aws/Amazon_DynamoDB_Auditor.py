@@ -49,9 +49,7 @@ def ddb_kms_cmk_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartiti
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -104,9 +102,7 @@ def ddb_kms_cmk_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartiti
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -160,9 +156,7 @@ def ddb_kms_cmk_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartiti
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -228,9 +222,7 @@ def ddb_pitr_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartition:
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery_Howitworks.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -289,9 +281,7 @@ def ddb_pitr_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartition:
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery_Howitworks.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -363,9 +353,7 @@ def ddb_ttl_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartition: 
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/time-to-live-ttl-before-you-start.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',
@@ -424,9 +412,7 @@ def ddb_ttl_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartition: 
                                 'Url': 'https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/time-to-live-ttl-before-you-start.html'
                             }
                         },
-                        'ProductFields': {
-                            'Product Name': 'Day2SecurityBot'
-                        },
+                        'ProductFields': {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         'Resources': [
                             {
                                 'Type': 'AwsDynamoDbTable',

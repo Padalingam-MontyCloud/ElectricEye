@@ -58,7 +58,7 @@ def ec2_imdsv2_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                                         "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html#instance-metadata-transition-to-version-2",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEc2Instance",
@@ -136,7 +136,7 @@ def ec2_imdsv2_check(cache: dict, awsAccountId: str, awsRegion: str, awsPartitio
                                         "Url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html#instance-metadata-transition-to-version-2",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsEc2Instance",

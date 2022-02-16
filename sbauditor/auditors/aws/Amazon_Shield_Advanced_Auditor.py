@@ -54,7 +54,7 @@ def shield_advanced_route_53_protection_check(
                             "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsRoute53HostedZone",
@@ -112,7 +112,7 @@ def shield_advanced_route_53_protection_check(
                                 "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsRoute53HostedZone",
@@ -186,7 +186,7 @@ def shield_advanced_elb_protection_check(
                             "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsElbLoadBalancer",
@@ -244,7 +244,7 @@ def shield_advanced_elb_protection_check(
                                 "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbLoadBalancer",
@@ -325,7 +325,7 @@ def shield_advanced_elb_v2_protection_check(
                             "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsElbv2LoadBalancer",
@@ -393,7 +393,7 @@ def shield_advanced_elb_v2_protection_check(
                                 "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbv2LoadBalancer",
@@ -477,7 +477,7 @@ def shield_advanced_eip_protection_check(
                             "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsEc2Eip",
@@ -535,7 +535,7 @@ def shield_advanced_eip_protection_check(
                                 "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsEc2Eip",
@@ -612,7 +612,7 @@ def shield_advanced_cloudfront_protection_check(
                             "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsCloudFrontDistribution",
@@ -672,7 +672,7 @@ def shield_advanced_cloudfront_protection_check(
                                 "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsCloudFrontDistribution",
@@ -744,7 +744,7 @@ def shield_advanced_drt_access_check(
                         "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/authorize-DRT.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -802,7 +802,7 @@ def shield_advanced_drt_access_check(
                         "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/authorize-DRT.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -869,7 +869,7 @@ def shield_advanced_drt_s3_bucket_check(
                     "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/authorize-DRT.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -927,7 +927,7 @@ def shield_advanced_drt_s3_bucket_check(
                     "Url": "https://docs.aws.amazon.com/waf/latest/developerguide/authorize-DRT.html",
                 }
             },
-            "ProductFields": {"Product Name": "Day2SecurityBot"},
+            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
             "Resources": [
                 {
                     "Type": "AwsAccount",
@@ -997,7 +997,7 @@ def shield_advanced_subscription_autorenew_check(
                         "Url": "https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_UpdateSubscription.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",
@@ -1046,7 +1046,7 @@ def shield_advanced_subscription_autorenew_check(
                         "Url": "https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_UpdateSubscription.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsAccount",

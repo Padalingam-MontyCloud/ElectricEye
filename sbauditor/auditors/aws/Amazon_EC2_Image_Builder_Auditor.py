@@ -43,7 +43,7 @@ def imagebuilder_pipeline_tests_enabled_check(cache: dict, awsAccountId: str, aw
                         "Url": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security-best-practices.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsImageBuilderPipeline",
@@ -94,7 +94,7 @@ def imagebuilder_pipeline_tests_enabled_check(cache: dict, awsAccountId: str, aw
                         "Url": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security-best-practices.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsImageBuilderPipeline",
@@ -159,7 +159,7 @@ def imagebuilder_ebs_encryption_check(cache: dict, awsAccountId: str, awsRegion:
                         "Url": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/how-image-builder-works.html#image-builder-components",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsImageBuilderRecipe",
@@ -210,7 +210,7 @@ def imagebuilder_ebs_encryption_check(cache: dict, awsAccountId: str, awsRegion:
                         "Url": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/how-image-builder-works.html#image-builder-components",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsImageBuilderRecipe",

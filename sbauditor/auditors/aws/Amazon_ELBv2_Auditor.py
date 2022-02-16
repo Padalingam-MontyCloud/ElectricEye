@@ -68,7 +68,7 @@ def elbv2_alb_logging_check(
                                         "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsElbv2LoadBalancer",
@@ -132,7 +132,7 @@ def elbv2_alb_logging_check(
                                         "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html",
                                     }
                                 },
-                                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                 "Resources": [
                                     {
                                         "Type": "AwsElbv2LoadBalancer",
@@ -229,7 +229,7 @@ def elbv2_deletion_protection_check(
                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#deletion-protection",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbv2LoadBalancer",
@@ -295,7 +295,7 @@ def elbv2_deletion_protection_check(
                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#deletion-protection",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbv2LoadBalancer",
@@ -387,7 +387,7 @@ def elbv2_internet_facing_secure_listeners_check(
                                 "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbv2LoadBalancer",
@@ -450,7 +450,7 @@ def elbv2_internet_facing_secure_listeners_check(
                                 "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbv2LoadBalancer",
@@ -550,7 +550,7 @@ def elbv2_tls12_listener_policy_check(
                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbv2LoadBalancer",
@@ -615,7 +615,7 @@ def elbv2_tls12_listener_policy_check(
                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies",
                                 }
                             },
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "AwsElbv2LoadBalancer",
@@ -706,7 +706,7 @@ def elbv2_drop_invalid_header_check(
                                 "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbv2LoadBalancer",
@@ -768,7 +768,7 @@ def elbv2_drop_invalid_header_check(
                                 "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes",
                             }
                         },
-                        "ProductFields": {"Product Name": "Day2SecurityBot"},
+                        "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                         "Resources": [
                             {
                                 "Type": "AwsElbv2LoadBalancer",
@@ -867,7 +867,7 @@ def elbv2_nlb_tls_logging_check(
                                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-access-logs.html",
                                                 }
                                             },
-                                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                             "Resources": [
                                                 {
                                                     "Type": "AwsElbv2LoadBalancer",
@@ -929,7 +929,7 @@ def elbv2_nlb_tls_logging_check(
                                                     "Url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-access-logs.html",
                                                 }
                                             },
-                                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                                             "Resources": [
                                                 {
                                                     "Type": "AwsElbv2LoadBalancer",

@@ -121,7 +121,7 @@ def any_port_open_to_the_internet(
                                             "Url": "https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#AddRemoveRules",
                                         }
                                     },
-                                    "ProductFields": {"Product Name": "Day2SecurityBot", "Metadata": json.dumps(metadata)},
+                                    "ProductFields": {"Product Name": "Day2SecurityBot", "Metadata": json.dumps(metadata), "RunId":cache.get("RunId")},
                                     "Resources": [
                                         {
                                             "Type": "AwsEc2Instance",

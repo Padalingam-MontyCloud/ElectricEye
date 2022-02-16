@@ -55,7 +55,7 @@ def kinesis_stream_encryption_check(
                         "Url": "https://docs.aws.amazon.com/streams/latest/dev/getting-started-with-sse.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsKinesisStream",
@@ -104,7 +104,7 @@ def kinesis_stream_encryption_check(
                         "Url": "https://docs.aws.amazon.com/streams/latest/dev/getting-started-with-sse.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsKinesisStream",
@@ -170,7 +170,7 @@ def kinesis_enhanced_monitoring_check(
                             "Url": "https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKinesisStream",
@@ -222,7 +222,7 @@ def kinesis_enhanced_monitoring_check(
                             "Url": "https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html",
                         }
                     },
-                    "ProductFields": {"Product Name": "Day2SecurityBot"},
+                    "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                     "Resources": [
                         {
                             "Type": "AwsKinesisStream",

@@ -50,7 +50,7 @@ def ecr_repo_vuln_scan_check(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -96,7 +96,7 @@ def ecr_repo_vuln_scan_check(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -157,7 +157,7 @@ def ecr_repo_image_lifecycle_policy_check(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -207,7 +207,7 @@ def ecr_repo_image_lifecycle_policy_check(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -272,7 +272,7 @@ def ecr_repo_permission_policy(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -331,7 +331,7 @@ def ecr_repo_permission_policy(
                         "Url": "https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html",
                     }
                 },
-                "ProductFields": {"Product Name": "Day2SecurityBot"},
+                "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                 "Resources": [
                     {
                         "Type": "AwsEcrRepository",
@@ -434,7 +434,7 @@ def ecr_latest_image_vuln_check(
                                 }
                             },
                             "SourceUrl": vulnDeepLink,
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "Container",
@@ -493,7 +493,7 @@ def ecr_latest_image_vuln_check(
                                 }
                             },
                             "SourceUrl": vulnDeepLink,
-                            "ProductFields": {"Product Name": "Day2SecurityBot"},
+                            "ProductFields": {"Product Name": "Day2SecurityBot", "RunId":cache.get("RunId")},
                             "Resources": [
                                 {
                                     "Type": "Container",
