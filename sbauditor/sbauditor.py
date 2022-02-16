@@ -2,6 +2,7 @@ from functools import partial
 import inspect
 import os
 from time import sleep
+import uuid
 
 import boto3
 
@@ -70,12 +71,15 @@ class SBAuditor(object):
         return values
 
     def run_checks(self, requested_check_name=None, delay=0):
+        run_id = str(uuid.uuid4())
         for service_name, check_list in self.registry.checks.items():
             if self.awsRegion not in self.get_regions(service_name):
                 print(f"AWS region {self.awsRegion} not supported for {service_name}")
                 next
             # a dictionary to be used by checks that are part of the same service
-            auditor_cache = {}
+            auditor_cache = {
+                "RunId": run_id
+            }
             for check_name, check in check_list.items():
                 #print("check-name", check_name, "check", check)
                 # if a specific check is requested, only run that one check
