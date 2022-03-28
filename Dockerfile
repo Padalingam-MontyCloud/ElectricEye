@@ -26,6 +26,5 @@ RUN \
 
 CMD \
     echo ${PluginNames} && \
-    aws s3 cp s3://${SH_SCRIPTS_BUCKET}/ ./sbauditor/auditors/aws --recursive && \
     python3 sbauditor/controller.py -a ${PluginNames}
 
