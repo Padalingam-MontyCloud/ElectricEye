@@ -33,7 +33,7 @@ def ebs_volume_attachment_check(
     myEbsVolumes = response["Volumes"]
     for volumes in myEbsVolumes:
         ebsVolumeId = str(volumes["VolumeId"])
-        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}/{ebsVolumeId}"
+        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:volume/{ebsVolumeId}"
         ebsAttachments = volumes["Attachments"]
         for attachments in ebsAttachments:
             ebsAttachmentState = str(attachments["State"])
@@ -149,7 +149,7 @@ def EbsVolumeDeleteOnTerminationCheck(
     myEbsVolumes = response["Volumes"]
     for volumes in myEbsVolumes:
         ebsVolumeId = str(volumes["VolumeId"])
-        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}/{ebsVolumeId}"
+        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:volume/{ebsVolumeId}"
         ebsAttachments = volumes["Attachments"]
         for attachments in ebsAttachments:
             ebsDeleteOnTerminationCheck = str(attachments["DeleteOnTermination"])
@@ -267,7 +267,7 @@ def EbsVolumeEncryptionCheck(
     myEbsVolumes = response["Volumes"]
     for volumes in myEbsVolumes:
         ebsVolumeId = str(volumes["VolumeId"])
-        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}/{ebsVolumeId}"
+        ebsVolumeArn = f"arn:{awsPartition}:ec2:{awsRegion}:{awsAccountId}:volume/{ebsVolumeId}"
         ebsEncryptionCheck = str(volumes["Encrypted"])
         # ISO Time
         iso8601Time = datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
